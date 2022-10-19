@@ -7,11 +7,11 @@ public class DeathManager : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collided death!");
-
         if (collision.tag == "Zombie")
         {
             //Ending Code here
+            UnityEditor.EditorApplication.isPlaying = false;
+            Application.Quit();
             Debug.Log("Died!");
         }
     }

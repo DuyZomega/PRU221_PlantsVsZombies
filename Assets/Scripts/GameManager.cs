@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -87,4 +88,11 @@ public class GameManager : MonoBehaviour
 	{
         PlayerPrefs.SetInt(coinPrefsName, currentAmount);
 	}
+
+    public void EndGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
+    }
+
 }

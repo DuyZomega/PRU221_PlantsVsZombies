@@ -9,6 +9,6 @@ public class PauseMusic : MonoBehaviour
     void Update()
     {
         if (SceneManager.GetActiveScene().name == "MainScene")
-            MusicClass.instance.GetComponent<AudioSource>().Pause();
+            MusicClass.instance.GetComponent<AudioSource>().Stop();
     }
 }
