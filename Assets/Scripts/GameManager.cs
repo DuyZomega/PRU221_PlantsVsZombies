@@ -89,10 +89,5 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt(coinPrefsName, currentAmount);
 	}
 
-    public void EndGame()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit();
-    }
 
 }

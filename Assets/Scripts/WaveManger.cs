@@ -63,11 +63,9 @@ public class WaveManger : MonoBehaviour
 			nextGoal = levelGoals[levelGoals.IndexOf(nextGoal) + 1 < levelGoals.Count ? levelGoals.IndexOf(nextGoal) + 1 : 0];
 		}
 
-		//
+		//Check progressbar end Game
 		if(levelProgress.maxValue == levelProgress.value)
 		{
-            Debug.Log(levelProgress.value.ToString());
-            Debug.Log("Progress Bar Quitted!!!");
             UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
