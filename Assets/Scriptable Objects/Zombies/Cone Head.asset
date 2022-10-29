@@ -18,7 +18,7 @@ MonoBehaviour:
   accessoryHealth: 25
   zombieHealth: 125
   zombieHandHealth: 50
-  zombieDamage: 7
+  zombieDamage: 5
   zombieSpeed: 0.5
   attackInterval: 1
   coinDropPercent: 50

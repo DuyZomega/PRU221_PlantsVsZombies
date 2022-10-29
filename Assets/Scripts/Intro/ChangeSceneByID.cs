@@ -24,7 +24,7 @@ public class ChangeSceneByID : MonoBehaviour
     void Exit()
     {
         PayAudioClip();
-        EditorApplication.isPlaying = false;
+        //UnityEngine.EditorApplication.isPlaying = false;
         Application.Quit();
     }
     void ChangeScene() 
