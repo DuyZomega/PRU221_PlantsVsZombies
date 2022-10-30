@@ -16,9 +16,9 @@ MonoBehaviour:
   zombieAccessory: {fileID: 0}
   zombieType: 0
   accessoryHealth: 0
-  zombieHealth: 100
+  zombieHealth: 200
   zombieHandHealth: 50
-  zombieDamage: 5
+  zombieDamage: 2
   zombieSpeed: 0.5
-  attackInterval: 1
+  attackInterval: 0.5
   coinDropPercent: 10
