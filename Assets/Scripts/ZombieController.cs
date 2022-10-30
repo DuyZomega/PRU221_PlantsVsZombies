@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,80 +46,88 @@ public class ZombieController : MonoBehaviour
 
     private void Update()
     {
-        if (target == null)
+        try
         {
-            isAttacking = false;
-        }
-
-        if (!isAttacking && !isDying)
-        {
-            isWalking = true;
-            this.GetComponent<Animator>().SetBool("IsWalking", isWalking);
-            this.transform.position += Vector3.left * speed * Time.deltaTime;
-        }
-        else
-        {
-            isWalking = false;
-            this.transform.position = this.transform.position;
-        }
-
-        if (currentHealth <= handHealth && this.transform.childCount > 1)
-        {
-            //Add rigidbody 2d to hand
-            Transform hand = this.transform.GetChild(1);
-
-            hand.gameObject.GetComponentInChildren<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            hand.gameObject.GetComponentInChildren<Rigidbody2D>().gravityScale = 1f;
-
-            hand.SetParent(null);
-
-            Destroy(hand.gameObject, 1.5f);
-        }
-
-        if (currentHealth <= 0 && this.transform.childCount > 0)
-        {
-            isDying = true;
-			//Dead
-			//Add rigidbody 2d to head
-
-			if (!incremented)
-			{
-                incremented = true; 
-                WaveManger.currentZombieKilled++;
-
-                int randomInt = Random.Range(0, 101);
-
-				if (randomInt <= ((thisZombieSO.coinDropPercent / 100) * 100))
-				{
-                    GameObject coinObj = Instantiate(coinPrefab, this.transform);
-
-                    coinPrefab.transform.SetParent(null);
-				}
-            }
-
-            Transform head = this.transform.GetChild(0);
-
-            head.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            head.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1f;
-
-            head.SetParent(null);
-
-            Destroy(head.gameObject, 1.5f);
-
-            Destroy(this.GetComponent<Rigidbody2D>());
-
-            foreach (var item in this.GetComponents<BoxCollider2D>())
+            if (target == null)
             {
-                Destroy(item);
+                isAttacking = false;
             }
 
-            Destroy(this.gameObject, 2f);
-        }
+            if (!isAttacking && !isDying)
+            {
+                isWalking = true;
+                this.GetComponent<Animator>().SetBool("IsWalking", isWalking);
+                this.transform.position += Vector3.left * speed * Time.deltaTime;
+            }
+            else
+            {
+                isWalking = false;
+                this.transform.position = this.transform.position;
+            }
 
-        if (accessory == null)
-        {
-            thisZombieSO.zombieType = ZombieScriptableObject.ZombieType.Normal;
+            if (currentHealth <= handHealth && this.transform.childCount > 1)
+            {
+                //Add rigidbody 2d to hand
+                Transform hand = this.transform.GetChild(1);
+
+                hand.gameObject.GetComponentInChildren<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                hand.gameObject.GetComponentInChildren<Rigidbody2D>().gravityScale = 1f;
+
+                hand.SetParent(null);
+
+                Destroy(hand.gameObject, 1.5f);
+            }
+
+            if (currentHealth <= 0 && this.transform.childCount > 0)
+            {
+                isDying = true;
+                //Dead
+                //Add rigidbody 2d to head
+
+                if (!incremented)
+                {
+                    incremented = true;
+                    WaveManger.currentZombieKilled++;
+
+                    int randomInt = UnityEngine.Random.Range(0, 101);
+
+                    if (randomInt <= ((thisZombieSO.coinDropPercent / 100) * 100))
+                    {
+                        GameObject coinObj = Instantiate(coinPrefab, this.transform);
+
+                        coinPrefab.transform.SetParent(null);
+                    }
+                }
+
+                Transform head = this.transform.GetChild(0);
+
+                head.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                head.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1f;
+
+                head.SetParent(null);
+
+                Destroy(head.gameObject, 1.5f);
+
+                Destroy(this.GetComponent<Rigidbody2D>());
+
+                foreach (var item in this.GetComponents<BoxCollider2D>())
+                {
+                    Destroy(item);
+                }
+
+                Destroy(this.gameObject, 2f);
+            }
+
+            if (accessory == null)
+            {
+                thisZombieSO.zombieType = ZombieScriptableObject.ZombieType.Normal;
+            }
         }
+        catch (Exception ex)
+        {
+            Debug.Log(ex.ToString());
+        }
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)

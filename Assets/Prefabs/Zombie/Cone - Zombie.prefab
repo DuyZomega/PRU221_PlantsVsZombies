@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7981478958326100834}
   - component: {fileID: 4672997866381199129}
   - component: {fileID: -6336644902588186953}
+  - component: {fileID: -4142634563297899122}
   m_Layer: 0
   m_Name: Cone - Zombie
   m_TagString: Untagged
@@ -102,3 +103,24 @@ MonoBehaviour:
   accessoryHealthCurrent: 40
   accessoryStates:
   - {fileID: 21300000, guid: 296370bdb4208cd43b545ddbc8822249, type: 3}
+--- !u!50 &-4142634563297899122
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330526956472489617}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
