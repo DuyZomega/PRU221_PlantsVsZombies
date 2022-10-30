@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accessoryRenderer: {fileID: 7575054273978620911}
-  accessoryHealth: 10
-  accessoryHealthCurrent: 10
+  accessoryHealth: 50
+  accessoryHealthCurrent: 50
   accessoryStates:
   - {fileID: 21300000, guid: 26daacec7ed35ea4b8061df295a47a8c, type: 3}
 --- !u!50 &-3685987093412419797
