@@ -1789,8 +1789,8 @@ MonoBehaviour:
   selectedSO: {fileID: 11400000, guid: d20c53b06c015d54cb7bae0022cd543e, type: 2}
   timeInterval: 0
   randomizeTimes: 1
-  minTime: 0.5
-  maxTime: 5
+  minTime: 1.5
+  maxTime: 7
   columns:
   - {fileID: 283937218}
   - {fileID: 839301414}
