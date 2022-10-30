@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 820.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 503, y: 321}
   m_MaxSize: {x: 16192, y: 12117}
   vertical: 0
-  controlID: 109
+  controlID: 56
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 321}
   m_MaxSize: {x: 8096, y: 12117}
   vertical: 1
-  controlID: 34
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 21
+  controlID: 19
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/Intro
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/Intro
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\DELL\OneDrive\MyComputer\WorkSpace\Unity\PRU221_PlantsVsZombies
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 82.20001}
-    m_SelectedIDs: 94560000
-    m_LastClickedID: 22164
-    m_ExpandedIDs: 000000006456000066560000685600006a5600006c5600006e560000705600007256000074560000
+    scrollPos: {x: 0, y: 50.200012}
+    m_SelectedIDs: 9a560000
+    m_LastClickedID: 22170
+    m_ExpandedIDs: 00000000625600006456000066560000685600006a5600006c5600006e5600008c56000090560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006456000066560000685600006a5600006c5600006e560000705600007256000074560000
+    m_ExpandedIDs: 00000000625600006456000066560000685600006a5600006c5600006e560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -451,7 +451,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 664.8
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -488,9 +488,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 380c0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 58faffff
+      m_SelectedIDs: 445a0000
+      m_LastClickedID: 23108
+      m_ExpandedIDs: b4f7ffff56f9ffff58faffffc8560000825a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -805,9 +805,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1548.1923, y: 115.87268, z: -1.5447494}
+    m_Target: {x: -164.51337, y: 2.088459, z: -8.465624}
     speed: 2
-    m_Value: {x: 1548.1923, y: 115.87268, z: -1.5447494}
+    m_Value: {x: -164.51337, y: 2.088459, z: -8.465624}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -857,9 +857,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 238.68726
+    m_Target: 844.7524
     speed: 2
-    m_Value: 238.68726
+    m_Value: 844.7524
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -922,9 +922,9 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
+  m_EnterPlayModeBehavior: 3
   m_fullscreenMonitorIdx: 0
-  m_playModeBehaviorIdx: 0
+  m_playModeBehaviorIdx: 2
   m_UseMipMap: 0
   m_isFullscreen: 0
   m_suppressRenderingForFullscreen: 0
@@ -961,7 +961,7 @@ MonoBehaviour:
       y: 21
       width: 757.2
       height: 414
-    m_Scale: {x: 0.47916666, y: 0.47916666}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 378.6, y: 207}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -969,10 +969,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -790.12177
-      y: -432
-      width: 1580.2435
-      height: 864
+      x: -378.6
+      y: -207
+      width: 757.2
+      height: 414
     m_MinimalGUI: 1
   m_defaultScale: 0.47916666
   m_LastWindowPixelSize: {x: 946.5, y: 543.75}

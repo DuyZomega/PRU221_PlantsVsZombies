@@ -19,7 +19,7 @@ public class SliderManager : MonoBehaviour
         if (mainSlider.value.Equals(6f))
         {
             Debug.Log(mainSlider.value.ToString());
-            Debug.Log("PRogress Bar Quitted!!!");
+            Debug.Log("Progress Bar Quitted!!!");
             UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
