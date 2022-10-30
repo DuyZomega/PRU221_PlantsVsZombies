@@ -7,6 +7,21 @@ using UnityEngine.UI;
 [System.Serializable]
 public class PauseMenu : MonoBehaviour
 {
+    public Button yourButton;
+
+    void Start()
+    {
+        Button btn = yourButton.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+    }
+
+    void TaskOnClick()
+    {
+    pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPause = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
     // Start is called before the first frame update
     public static bool GameIsPause = false;
 
@@ -18,8 +33,13 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField]
 
-
-
+    public void RestartButton()
+    {
+        SceneManager.LoadScene("MainScene");
+        Time.timeScale = 1f;
+        GameIsPause = false;
+        Cursor.lockState = CursorLockMode.None;
+    }
 
     private GameObject mainMenu;
 
@@ -52,8 +72,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Return()
     {
+        SceneManager.LoadScene("MenuScene");
         Time.timeScale = 1f;
         GameIsPause = false;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void Options()
