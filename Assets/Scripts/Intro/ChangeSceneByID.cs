@@ -23,16 +23,16 @@ public class ChangeSceneByID : MonoBehaviour
     }
     void Exit()
     {
-        PayAudioClip();
-        //UnityEngine.EditorApplication.isPlaying = false;
+        PlayAudioClip();
+        EditorApplication.isPlaying = false;
         Application.Quit();
     }
     void ChangeScene() 
     {
-        PayAudioClip();
+        PlayAudioClip();
         SceneManager.LoadSceneAsync(sceneID); 
     }
-    void PayAudioClip()
+    void PlayAudioClip()
     {
         if (audioSource != null && audioClip!=null)
         {
