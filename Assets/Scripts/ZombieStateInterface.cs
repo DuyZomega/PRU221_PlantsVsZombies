@@ -1,18 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class ZombieStateInterface : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+    public interface ZombieState
     {
-        
+        void Walking();
+        void Attacking();
+        void Dying();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
