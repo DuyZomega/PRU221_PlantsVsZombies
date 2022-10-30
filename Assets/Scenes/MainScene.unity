@@ -1708,7 +1708,7 @@ MonoBehaviour:
   timeInterval: 0
   randomizeTimes: 1
   minTime: 0.5
-  maxTime: 5
+  maxTime: 3
   columns:
   - {fileID: 283937218}
   - {fileID: 839301414}
